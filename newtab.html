@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>New Tab</title>
+  <style>
+    body {
+      background-color: #1a1a1a;
+      color: #e0e0e0;
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .chart-container {
+      position: relative;
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      background: conic-gradient(#444 0% 0%, #fff 0% 100%);
+      margin-bottom: 40px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    }
+    
+    .chart-inner {
+      position: absolute;
+      top: 10px; left: 10px; right: 10px; bottom: 10px;
+      background-color: #1a1a1a;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .percentage {
+      font-size: 2.5rem;
+      font-weight: bold;
+    }
+
+    .label {
+      font-size: 0.9rem;
+      color: #888;
+      margin-top: 5px;
+    }
+
+    .countdown {
+      font-size: 1.5rem;
+      font-variant-numeric: tabular-nums;
+      letter-spacing: 2px;
+      text-align: center;
+    }
+
+    .countdown .time-in-hours {
+      display: block;
+      margin-top: 6px;
+      font-size: 0.9rem;
+      color: #888;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .message {
+      margin-top: 20px;
+      font-size: 0.9rem;
+      color: #666;
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="chart-container" id="chart">
+    <div class="chart-inner">
+      <div style="text-align: center;">
+        <div class="percentage" id="percent-display">0%</div>
+        <div class="label">REMAINING</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="countdown" id="countdown-display">
+    00年 000日 00:00:00
+  </div>
+  
+  <div class="message">Time is ticking. Dive into your life.</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
